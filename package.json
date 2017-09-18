@@ -1,0 +1,26 @@
+{
+  "name": "witch_cook",
+  "version": "0.1.0",
+  "description": "Prototype of css cooking game",
+  "license": "MIT",
+  "author": "Matej Janacek",
+  "dependencies": {
+    "react": "^16.0.0-alpha.12",
+    "react-dom": "^16.0.0-alpha.12"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.13.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "scripts": {
+    "watch": "webpack --progress --watch",
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  }
+}
