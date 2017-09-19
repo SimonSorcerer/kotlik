@@ -2,3 +2,4 @@
 /target
 /typings
 npm-debug.log
+/dist/bundle.js
