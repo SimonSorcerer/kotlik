@@ -1,0 +1,38 @@
+.wrapper {
+    position: relative;
+    min-width: 900px;
+    display: flex;
+    min-height: 280px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.ground {
+    width: 90%;
+    border-top: 2px solid #806347;
+    height: 40px;
+    background-color: #806347;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #fff,
+        #fff 49%,
+        #806347 50%,
+        #806347 50%,
+        #fff 55%
+    );
+    background-size: 9px 9px;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    top: 110px;
+    left: calc(50% - 360px);
+    min-width: 600px;
+    height: 200px;
+    border: 2px solid #333;
+    background-color: #fff;
+    opacity: .7;
+}

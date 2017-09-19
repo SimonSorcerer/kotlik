@@ -10,7 +10,15 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true
+                        }
+                    }
+                ]
             },
             {
                 test: /\.(jsx|js)$/,
@@ -29,7 +37,8 @@ module.exports = {
     },
     resolve: {
         alias: {
-            'components': './components',
+            'components': path.resolve(__dirname, 'js/components'),
+            'css': path.resolve(__dirname, 'css')
         }
     }
 };
