@@ -1,14 +1,44 @@
 import React from 'react';
 import { Box } from 'components/box.jsx';
 import { Colorizer } from 'components/colorizer.jsx';
+import { Refresh } from 'components/refresh.jsx';
+import { getRandomColors, mixColors } from 'helpers/colorHelpers.js';
 import styles from '../../css/main.css';
 
-export const Main = () => (
-    <div className={ styles.wrapper }>
-        <div className={ styles.ground }></div>
-        <div className={ styles.container }>
-            { [1, 2, 3, 4, 5].map((data, index) => <Box key={ index } label='#f26aa3' />) }
-        </div>
-        <Colorizer label='#c36ae1' />
-    </div>
-);
+export class Main extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            colors: props.colors || getRandomColors(5),
+            finalColor: '#ffffff'
+        }
+    }
+
+    refresh() {
+        this.setState({
+            colors: getRandomColors(5)
+        })
+    }
+
+    mixColor(color) {
+        const mix = mixColors(color, this.state.finalColor);
+        console.log('mixing color: ', color);
+        console.log('mixed color: ', mix);
+
+        this.setState({
+            finalColor: mix
+        });
+    }
+
+    render() {
+        return <div className={ styles.wrapper }>
+            <div className={ styles.ground }></div>
+            <div className={ styles.container }>
+                { this.state.colors.map((data, index) => <Box key={ data.id } color={ data.color } onColorClick={ () => this.mixColor(data.color) } />) }
+                <div className={ styles.refresh }><Refresh onClick={ () => this.refresh() } /></div>
+            </div>
+            <Colorizer color={ this.state.finalColor } />
+        </div>;
+    }
+}

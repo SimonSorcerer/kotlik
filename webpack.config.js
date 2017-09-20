@@ -26,9 +26,13 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env', 'react']
+                        presets: ['env', 'react', 'stage-3']
                     }
                 }
+            },
+            {
+                test: /\.(png|svg|jpg)$/,
+                use: 'file-loader'
             }
         ]
     },
@@ -37,6 +41,7 @@ module.exports = {
     },
     resolve: {
         alias: {
+            'helpers': path.resolve(__dirname, 'js/helpers'),
             'components': path.resolve(__dirname, 'js/components'),
             'css': path.resolve(__dirname, 'css')
         }

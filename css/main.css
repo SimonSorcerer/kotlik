@@ -36,3 +36,12 @@
     background-color: #fff;
     opacity: .7;
 }
+
+.refresh {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 28px;
+    height: 28px;
+    opacity: .8;
+}

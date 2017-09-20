@@ -1,7 +1,7 @@
 {
-  "name": "witch_cook",
+  "name": "kotlik",
   "version": "0.1.0",
-  "description": "Prototype of css cooking game",
+  "description": "Testing color transition",
   "license": "MIT",
   "author": "Matej Janacek",
   "dependencies": {
@@ -13,7 +13,9 @@
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
     "css-loader": "^0.28.4",
+    "file-loader": "^0.10.1",
     "style-loader": "^0.13.2",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"

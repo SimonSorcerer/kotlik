@@ -2,6 +2,7 @@
     width: 80px;
     margin: 36px 10px 0 10px;
     opacity: .8;
+    cursor: pointer;
 }
 
 .wrapper:hover {
@@ -10,12 +11,15 @@
 
 .box {
     margin: 0 auto;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
+    padding: 2px;
     border: 2px solid #333;
-    background-color: #dedede;
-    margin-bottom: 16px;
-    cursor: pointer;
+    margin-bottom: 14px;    
+}
+
+.color {
+    height: 100%;
 }
 
 .label {
