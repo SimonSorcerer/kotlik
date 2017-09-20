@@ -23,8 +23,7 @@ export class Main extends React.Component {
 
     mixColor(color) {
         const mix = mixColors(color, this.state.finalColor);
-        console.log('mixing color: ', color);
-        console.log('mixed color: ', mix);
+        console.log('mixing color ', color, ' with ', this.state.finalColor, ', result: ', mix);
 
         this.setState({
             finalColor: mix
